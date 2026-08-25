@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Protim Sri Borgohain | Professional Video Editor & Creative Storyteller</title>
+  <meta name="description" content="Portfolio of Protim Sri Borgohain — Creative Video Editor specializing in high-retention Reels, UGC, Social Media Ads, and Brand Storytelling." />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,600;0,800;1,800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom Cinematic Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-outline" id="cursorOutline"></div>
+
+  <!-- Background Grain Overlay -->
+  <div class="bg-noise"></div>
+
+  <!-- Ambient Glow Spotlights -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Sticky Glass Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo magnetic">PROTIM<span>.</span></a>
+      <nav class="nav-links">
+        <a href="#hero" class="nav-item">Home</a>
+        <a href="#showreel" class="nav-item">Showreel</a>
+        <a href="#work" class="nav-item">Work</a>
+        <a href="#about" class="nav-item">About</a>
+        <a href="#services" class="nav-item">Services</a>
+        <a href="#experience" class="nav-item">Journey</a>
+        <a href="#contact" class="btn-nav magnetic">Let's Work Together</a>
+      </nav>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars-staggered"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-content">
+        <div class="badge-pill">
+          <span class="pulse-dot"></span> Available for Selected Projects
+        </div>
+        
+        <h2 class="hero-subline">PROTIM SRI BORGOHAIN</h2>
+        
+        <h1 class="hero-headline">
+          I DON'T JUST EDIT VIDEOS.<br />
+          I CREATE CONTENT <span class="highlight-text">PEOPLE REMEMBER.</span>
+        </h1>
+
+        <div class="dynamic-role-wrapper">
+          <span>SPECIALIZED IN </span>
+          <span class="dynamic-role" id="dynamicRole">VIDEO EDITING</span>
+        </div>
+
+        <p class="hero-description">
+          High-impact videos, high-retention reels, and brand advertisements engineered to capture raw attention, evoke emotion, and make businesses impossible to ignore.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#work" class="btn btn-primary magnetic">
+            <span>VIEW MY WORK</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-secondary magnetic">
+            <span>LET'S WORK TOGETHER</span>
+          </a>
+        </div>
+
+        <!-- Hero Media Preview / Banner Container -->
+        <div class="hero-media-preview" id="heroMedia">
+          <div class="mockup-frame">
+            <!-- Replace with your actual hero banner image or background looping video -->
+            <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1600&q=80" alt="Protim Sri Borgohain Hero Showcase" class="hero-banner-img" />
+            <div class="frame-overlay">
+              <span class="timeline-indicator"><i class="fa-solid fa-film"></i> TIMELINE LOADED • 4K 60FPS</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="scroll-indicator">
+          <span>SCROLL TO EXPLORE</span>
+          <div class="mouse-scroll">
+            <div class="scroll-wheel"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOWREEL SECTION -->
+    <section class="showreel-section" id="showreel">
+      <div class="container">
+        <div class="section-tag">CINEMATIC SHOWCASE</div>
+        <h2 class="section-title">SELECTED SHOWREEL</h2>
+        
+        <div class="showreel-player-card" id="showreelCard">
+          <div class="video-container">
+            <!-- Drop your main showreel video link here -->
+            <video id="mainShowreelVideo" poster="https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=1400&q=80" loop muted playsinline>
+              <source src="YOUR_SHOWREEL_VIDEO_LINK.mp4" type="video/mp4" />
+            </video>
+            <div class="video-controls-overlay" id="playShowreelBtn">
+              <div class="play-button-glow">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <p>CLICK TO WATCH FULL SHOWREEL</p>
+            </div>
+          </div>
+        </div>
+        <p class="showreel-quote">“Turning raw footage into stories that people actually want to watch.”</p>
+      </div>
+    </section>
+
+    <!-- MARQUEE TICKER -->
+    <div class="marquee-strip">
+      <div class="marquee-track">
+        <span>VIDEO EDITING • CONTENT CREATION • MOTION GRAPHICS • STORYTELLING • COLOR GRADING • SOUND DESIGN • HIGH RETENTION REELS • ADVERTISEMENT • </span>
+        <span>VIDEO EDITING • CONTENT CREATION • MOTION GRAPHICS • STORYTELLING • COLOR GRADING • SOUND DESIGN • HIGH RETENTION REELS • ADVERTISEMENT • </span>
+      </div>
+    </div>
+
+    <!-- PORTFOLIO / SELECTED WORK -->
+    <section class="work-section" id="work">
+      <div class="container">
+        <div class="section-header-flex">
+          <div>
+            <div class="section-tag">SELECTED WORKS</div>
+            <h2 class="section-title">FEATURED PROJECTS</h2>
+          </div>
+          
+          <!-- Category Filter -->
+          <div class="portfolio-filter-tabs">
+            <button class="filter-tab active" data-filter="all">ALL WORK</button>
+            <button class="filter-tab" data-filter="reels">REELS & SHORTS</button>
+            <button class="filter-tab" data-filter="ads">ADS & UGC</button>
+            <button class="filter-tab" data-filter="brand">BRAND CONTENT</button>
+          </div>
+        </div>
+
+        <!-- Project Grid (Bento Style) -->
+        <div class="projects-bento-grid" id="portfolioGrid">
+          <!-- Dynamically populated by JS from the project list -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image-wrapper">
+            <div class="image-glass-frame">
+              <!-- Replace with your passport/portrait photo link -->
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Protim Sri Borgohain" class="profile-photo" id="profilePhoto" />
+              <div class="photo-badge">
+                <span>PROTIM SRI BORGOHAIN</span>
+                <small>Guwahati, Assam, India</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-text-content">
+            <div class="section-tag">BEHIND THE TIMELINE</div>
+            <h2 class="section-title">EDITING WITH INTENT & PRECISION.</h2>
+            
+            <p class="lead-text">
+              Hi, I'm <strong>Protim Sri Borgohain</strong> — a creative professional and video editor focused on transforming raw footage and bold ideas into compelling visual narratives.
+            </p>
+            <p>
+              My approach integrates calculated pacing, emotional rhythm, sound design, and color grading to keep audiences hooked from frame zero.
+            </p>
+
+            <div class="core-pillars-grid">
+              <div class="pillar-card">
+                <span class="pillar-num">01</span>
+                <h4>STORY</h4>
+                <p>Structure and rhythm that evokes curiosity and keeps retention high.</p>
+              </div>
+              <div class="pillar-card">
+                <span class="pillar-num">02</span>
+                <h4>EMOTION</h4>
+                <p>Color, score, and sound effects synchronized for psychological impact.</p>
+              </div>
+              <div class="pillar-card">
+                <span class="pillar-num">03</span>
+                <h4>ATTENTION</h4>
+                <p>Snappy visual hooks, smooth motion graphics, and zero filler frames.</p>
+              </div>
+              <div class="pillar-card">
+                <span class="pillar-num">04</span>
+                <h4>IMPACT</h4>
+                <p>Edits fine-tuned to convert viewers into followers, leads, and buyers.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS & TOOLS SECTION -->
+    <section class="skills-section">
+      <div class="container">
+        <div class="section-tag">EXPERTISE</div>
+        <h2 class="section-title">TOOLS OF THE TRADE</h2>
+        
+        <div class="tools-grid">
+          <div class="tool-card">
+            <i class="fa-solid fa-film tool-icon"></i>
+            <h3>Adobe Premiere Pro</h3>
+            <p>Industry standard long-form and commercial timeline assembly, multi-cam, and mastering.</p>
+          </div>
+          <div class="tool-card">
+            <i class="fa-solid fa-wand-magic-sparkles tool-icon"></i>
+            <h3>CapCut</h3>
+            <p>Rapid short-form viral editing, trending effects, seamless transitions, and keyframe animations.</p>
+          </div>
+          <div class="tool-card">
+            <i class="fa-solid fa-image tool-icon"></i>
+            <h3>Adobe Photoshop</h3>
+            <p>Custom graphic assets, high-CTR thumbnails, texture design, and matte painting.</p>
+          </div>
+          <div class="tool-card">
+            <i class="fa-solid fa-pen-ruler tool-icon"></i>
+            <h3>Canva</h3>
+            <p>Fast layout prototyping, typography styling, and social media brand templates.</p>
+          </div>
+          <div class="tool-card">
+            <i class="fa-solid fa-sliders tool-icon"></i>
+            <h3>Color Grading & Sync</h3>
+            <p>LUT creation, shot matching, skin tone corrections, and multi-track audio synchronization.</p>
+          </div>
+          <div class="tool-card">
+            <i class="fa-solid fa-chart-line tool-icon"></i>
+            <h3>Content Planning</h3>
+            <p>Retention scripting, visual hook formulation, and social media marketing strategy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="services-section" id="services">
+      <div class="container">
+        <div class="section-tag">SERVICES</div>
+        <h2 class="section-title">WHAT I CAN CREATE FOR YOU</h2>
+
+        <div class="services-bento">
+          <div class="service-box">
+            <span class="service-id">01</span>
+            <h3>Short-Form Video Editing</h3>
+            <p>High-retention Instagram Reels, YouTube Shorts, and TikToks designed with fast cuts, audio cues, and dynamic typography to maximize watch time.</p>
+          </div>
+          <div class="service-box">
+            <span class="service-id">02</span>
+            <h3>UGC & Creator Editing</h3>
+            <p>Authentic, natural, high-converting edits for creator-led brands and direct-to-consumer advertisements.</p>
+          </div>
+          <div class="service-box">
+            <span class="service-id">03</span>
+            <h3>Advertisement Videos</h3>
+            <p>Sales-driven commercial video edits tailored with strong hooks, clear call-to-actions, and platform-specific dimensions.</p>
+          </div>
+          <div class="service-box">
+            <span class="service-id">04</span>
+            <h3>Social Media Brand Content</h3>
+            <p>Consistent, on-brand promotional and educational videos that position your business as an industry leader.</p>
+          </div>
+          <div class="service-box">
+            <span class="service-id">05</span>
+            <h3>Motion Graphics & Visuals</h3>
+            <p>Kinetic subtitle animations, sleek lower-thirds, tracking callouts, and bespoke graphical elements.</p>
+          </div>
+          <div class="service-box">
+            <span class="service-id">06</span>
+            <h3>Audio Design & Mastering</h3>
+            <p>Immersive SFX placement, background score ducking, noise removal, and clear vocal leveling.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE / RESUME TIMELINE -->
+    <section class="experience-section" id="experience">
+      <div class="container">
+        <div class="section-tag">CAREER MILESTONES</div>
+        <h2 class="section-title">MY PROFESSIONAL JOURNEY</h2>
+
+        <div class="timeline-wrapper">
+          
+          <!-- Experience Item 1 -->
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-date">2025 – June 2026</span>
+              <span class="timeline-tag">Creative Leadership</span>
+            </div>
+            <div class="timeline-body">
+              <h3>Co-Founder & Creative Head</h3>
+              <h4 class="company-name">Anvex Media</h4>
+              <ul>
+                <li>Directed and edited promotional videos, reels, shorts, and performance advertising assets.</li>
+                <li>Managed end-to-end post-production, sound design, custom transitions, pacing, and color grading.</li>
+                <li>Partnered directly with clients from concept brainstorming to final delivery ensuring brand consistency.</li>
+                <li>Maintained quick turnarounds while driving social media viewer engagement.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Experience Item 2 -->
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-date">Sep 2025 – Dec 2025</span>
+              <span class="timeline-tag">Business Development</span>
+            </div>
+            <div class="timeline-body">
+              <h3>Management Trainee - Business Development</h3>
+              <h4 class="company-name">AaoStays</h4>
+              <ul>
+                <li>Supported integrated marketing campaigns, client relationship management, and brand promotion.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Experience Item 3 -->
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-date">July 2023 – Aug 2023</span>
+              <span class="timeline-tag">Environmental Analysis</span>
+            </div>
+            <div class="timeline-body">
+              <h3>Summer Intern</h3>
+              <h4 class="company-name">Pollution Control Board, Assam</h4>
+              <ul>
+                <li>Conducted rigorous water quality parameter analysis of Dighali Pukhuri, Guwahati.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Experience Item 4 -->
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-date">Aug 2022 – Sept 2022</span>
+              <span class="timeline-tag">Research & Engineering</span>
+            </div>
+            <div class="timeline-body">
+              <h3>Summer Intern</h3>
+              <h4 class="company-name">Indian Institute of Technology (IIT), Guwahati</h4>
+              <ul>
+                <li>Conducted dedicated research on the Desulphurization of Coal found in the North Eastern region of India.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Education Item -->
+          <div class="timeline-card education-card">
+            <div class="timeline-meta">
+              <span class="timeline-date">2020 – 2025</span>
+              <span class="timeline-tag">Academic Background</span>
+            </div>
+            <div class="timeline-body">
+              <h3>B.Tech in Chemical Engineering</h3>
+              <h4 class="company-name">Assam Science and Technology University (ASTU)</h4>
+              <p>Applied analytical problem-solving and structured technical workflows now utilized in creative digital production pipelines.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4-STEP PROCESS -->
+    <section class="process-section">
+      <div class="container">
+        <div class="section-tag">COLLABORATION WORKFLOW</div>
+        <h2 class="section-title">HOW WE WORK TOGETHER</h2>
+
+        <div class="process-grid">
+          <div class="process-step">
+            <div class="step-badge">01</div>
+            <h3>Share Your Vision</h3>
+            <p>Tell me about your brand, your audience, and your target campaign objective.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-badge">02</div>
+            <h3>Send The Footage</h3>
+            <p>Upload raw assets, scripts, audio tracks, and any specific inspiration links.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-badge">03</div>
+            <h3>Creative Editing</h3>
+            <p>I craft the cut, build the soundscape, apply color correction, and animate graphics.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-badge">04</div>
+            <h3>Final Delivery</h3>
+            <p>Receive your rendered, master-quality files ready for seamless publication.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-card-wrapper">
+          <div class="contact-header">
+            <div class="section-tag">START A PROJECT</div>
+            <h2 class="contact-title">
+              GOT FOOTAGE?<br />
+              <span>LET'S TURN IT INTO SOMETHING UNFORGETTABLE.</span>
+            </h2>
+            <p>Fill out the form or reach out directly through social channels.</p>
+          </div>
+
+          <div class="contact-grid">
+            <!-- Direct Info -->
+            <div class="direct-contact-pane">
+              <div class="contact-detail-row">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <label>Location</label>
+                  <p>Guwahati, Assam, India</p>
+                </div>
+              </div>
+
+              <div class="contact-detail-row">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                  <label>Email</label>
+                  <a href="mailto:protim01borgohain@gmail.com">protim01borgohain@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-detail-row">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                  <label>Phone / WhatsApp</label>
+                  <a href="https://wa.me/918011595012" target="_blank">+91 8011595012</a>
+                </div>
+              </div>
+
+              <div class="social-links-pane">
+                <a href="https://www.instagram.com/its_psb_?igsi=ZHdwYTBqcTVvODA2" target="_blank" class="social-btn magnetic" aria-label="Instagram">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://in.linkedin.com/in/protim-sri-borgohain-16b169219" target="_blank" class="social-btn magnetic" aria-label="LinkedIn">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://wa.me/918011595012" target="_blank" class="social-btn magnetic" aria-label="WhatsApp">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a href="mailto:protim01borgohain@gmail.com" class="social-btn magnetic" aria-label="Email">
+                  <i class="fa-regular fa-envelope"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Inquiry Form -->
+            <form class="inquiry-form" onsubmit="handleContactSubmit(event)">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" required placeholder="John Doe" />
+              </div>
+              <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" required placeholder="john@example.com" />
+              </div>
+              <div class="form-group">
+                <label for="projectType">Project Type</label>
+                <select id="projectType">
+                  <option value="reels">Instagram Reels / TikToks</option>
+                  <option value="ads">Advertisement / UGC</option>
+                  <option value="brand">Brand Film / Long-form</option>
+                  <option value="other">Other Creative Collaboration</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Project Scope & Details</label>
+                <textarea id="message" rows="4" required placeholder="Tell me about the raw footage, timeline, and goals..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block magnetic">
+                <span>SEND MESSAGE</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MODAL FOR FULL PROJECT PREVIEW -->
+  <div class="project-modal" id="projectModal">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-container">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div class="modal-content-layout">
+        <div class="modal-video-frame">
+          <div id="modalVideoSlot"></div>
+        </div>
+        <div class="modal-details">
+          <span class="modal-category" id="modalCat">Category</span>
+          <h3 class="modal-title" id="modalTitle">Project Title</h3>
+          <p class="modal-client" id="modalClient">Client: <span></span></p>
+          <p class="modal-description" id="modalDesc"></p>
+          <div class="modal-tools" id="modalTools"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <h3>PROTIM SRI BORGOHAIN</h3>
+        <p>Video Editor & Creative Storyteller</p>
+      </div>
+      <div class="footer-nav">
+        <a href="#hero">Home</a>
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-copy">
+        <p>© 2026 Protim Sri Borgohain. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
