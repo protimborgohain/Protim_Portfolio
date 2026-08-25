@@ -8,7 +8,7 @@
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,600;0,800;1,800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
   
   <!-- FontAwesome Icons -->
@@ -49,60 +49,60 @@
   </header>
 
   <main>
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION WITH BACKGROUND IMAGE & 25% LEFT OFFSET -->
     <section class="hero-section" id="hero">
-      <div class="hero-content">
-        <div class="badge-pill">
-          <span class="pulse-dot"></span> Available for Selected Projects
-        </div>
-        
-        <h2 class="hero-subline">PROTIM SRI BORGOHAIN</h2>
-        
-        <h1 class="hero-headline">
-          I DON'T JUST EDIT VIDEOS.<br />
-          I CREATE CONTENT <span class="highlight-text">PEOPLE REMEMBER.</span>
-        </h1>
+      <div class="hero-bg-media">
+        <img 
+          src="https://res.cloudinary.com/tf0gxhob/image/upload/v1787650320/ChatGPT_Image_Aug_25_2026_03_00_46_PM.png" 
+          alt="Hero Background" 
+          class="hero-bg-img" 
+        />
+        <div class="hero-bg-overlay"></div>
+      </div>
 
-        <div class="dynamic-role-wrapper">
-          <span>SPECIALIZED IN </span>
-          <span class="dynamic-role" id="dynamicRole">VIDEO EDITING</span>
-        </div>
-
-        <p class="hero-description">
-          High-impact videos, high-retention reels, and brand advertisements engineered to capture raw attention, evoke emotion, and make businesses impossible to ignore.
-        </p>
-
-        <div class="hero-cta-group">
-          <a href="#work" class="btn btn-primary magnetic">
-            <span>VIEW MY WORK</span>
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-          <a href="#contact" class="btn btn-secondary magnetic">
-            <span>LET'S WORK TOGETHER</span>
-          </a>
-        </div>
-
-        <!-- Hero Media Preview / Banner Container -->
-        <div class="hero-media-preview" id="heroMedia">
-          <div class="mockup-frame">
-            <!-- Replace with your actual hero banner image or background looping video -->
-            <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1600&q=80" alt="Protim Sri Borgohain Hero Showcase" class="hero-banner-img" />
-            <div class="frame-overlay">
-              <span class="timeline-indicator"><i class="fa-solid fa-film"></i> TIMELINE LOADED • 4K 60FPS</span>
-            </div>
+      <div class="hero-content-wrapper">
+        <div class="hero-content-left">
+          <div class="badge-pill">
+            <span class="pulse-dot"></span> Available for Selected Projects
           </div>
-        </div>
+          
+          <h2 class="hero-subline">PROTIM SRI BORGOHAIN</h2>
+          
+          <h1 class="hero-headline">
+            I DON'T JUST EDIT VIDEOS.<br />
+            I CREATE CONTENT <span class="highlight-text">PEOPLE REMEMBER.</span>
+          </h1>
 
-        <div class="scroll-indicator">
-          <span>SCROLL TO EXPLORE</span>
-          <div class="mouse-scroll">
-            <div class="scroll-wheel"></div>
+          <div class="dynamic-role-wrapper">
+            <span>SPECIALIZED IN </span>
+            <span class="dynamic-role" id="dynamicRole">VIDEO EDITING</span>
+          </div>
+
+          <p class="hero-description">
+            High-impact videos, high-retention reels, and brand advertisements engineered to capture raw attention, evoke emotion, and make businesses impossible to ignore.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#work" class="btn btn-primary magnetic">
+              <span>VIEW MY WORK</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#contact" class="btn btn-secondary magnetic">
+              <span>LET'S WORK TOGETHER</span>
+            </a>
+          </div>
+
+          <div class="scroll-indicator">
+            <span>SCROLL TO EXPLORE</span>
+            <div class="mouse-scroll">
+              <div class="scroll-wheel"></div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SHOWREEL SECTION -->
+    <!-- SELECTED SHOWREEL SECTION -->
     <section class="showreel-section" id="showreel">
       <div class="container">
         <div class="section-tag">CINEMATIC SHOWCASE</div>
@@ -110,9 +110,9 @@
         
         <div class="showreel-player-card" id="showreelCard">
           <div class="video-container">
-            <!-- Drop your main showreel video link here -->
-            <video id="mainShowreelVideo" poster="https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=1400&q=80" loop muted playsinline>
-              <source src="YOUR_SHOWREEL_VIDEO_LINK.mp4" type="video/mp4" />
+            <!-- Cloudinary Showreel Video -->
+            <video id="mainShowreelVideo" preload="metadata" loop playsinline>
+              <source src="https://res.cloudinary.com/tf0gxhob/video/upload/v1787645461/Cinematic_1.mp4" type="video/mp4" />
             </video>
             <div class="video-controls-overlay" id="playShowreelBtn">
               <div class="play-button-glow">
@@ -126,7 +126,7 @@
       </div>
     </section>
 
-    <!-- MARQUEE TICKER -->
+    <!-- MARQUEE STRIP -->
     <div class="marquee-strip">
       <div class="marquee-track">
         <span>VIDEO EDITING • CONTENT CREATION • MOTION GRAPHICS • STORYTELLING • COLOR GRADING • SOUND DESIGN • HIGH RETENTION REELS • ADVERTISEMENT • </span>
@@ -143,7 +143,6 @@
             <h2 class="section-title">FEATURED PROJECTS</h2>
           </div>
           
-          <!-- Category Filter -->
           <div class="portfolio-filter-tabs">
             <button class="filter-tab active" data-filter="all">ALL WORK</button>
             <button class="filter-tab" data-filter="reels">REELS & SHORTS</button>
@@ -152,9 +151,8 @@
           </div>
         </div>
 
-        <!-- Project Grid (Bento Style) -->
         <div class="projects-bento-grid" id="portfolioGrid">
-          <!-- Dynamically populated by JS from the project list -->
+          <!-- Populated by script.js -->
         </div>
       </div>
     </section>
@@ -165,7 +163,6 @@
         <div class="about-grid">
           <div class="about-image-wrapper">
             <div class="image-glass-frame">
-              <!-- Replace with your passport/portrait photo link -->
               <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Protim Sri Borgohain" class="profile-photo" id="profilePhoto" />
               <div class="photo-badge">
                 <span>PROTIM SRI BORGOHAIN</span>
@@ -212,7 +209,7 @@
       </div>
     </section>
 
-    <!-- SKILLS & TOOLS SECTION -->
+    <!-- SKILLS SECTION -->
     <section class="skills-section">
       <div class="container">
         <div class="section-tag">EXPERTISE</div>
@@ -263,7 +260,7 @@
           <div class="service-box">
             <span class="service-id">01</span>
             <h3>Short-Form Video Editing</h3>
-            <p>High-retention Instagram Reels, YouTube Shorts, and TikToks designed with fast cuts, audio cues, and dynamic typography to maximize watch time.</p>
+            <p>High-retention Instagram Reels, YouTube Shorts, and TikToks designed with fast cuts, audio cues, and dynamic typography.</p>
           </div>
           <div class="service-box">
             <span class="service-id">02</span>
@@ -294,15 +291,13 @@
       </div>
     </section>
 
-    <!-- EXPERIENCE / RESUME TIMELINE -->
+    <!-- EXPERIENCE SECTION -->
     <section class="experience-section" id="experience">
       <div class="container">
         <div class="section-tag">CAREER MILESTONES</div>
         <h2 class="section-title">MY PROFESSIONAL JOURNEY</h2>
 
         <div class="timeline-wrapper">
-          
-          <!-- Experience Item 1 -->
           <div class="timeline-card">
             <div class="timeline-meta">
               <span class="timeline-date">2025 – June 2026</span>
@@ -320,7 +315,6 @@
             </div>
           </div>
 
-          <!-- Experience Item 2 -->
           <div class="timeline-card">
             <div class="timeline-meta">
               <span class="timeline-date">Sep 2025 – Dec 2025</span>
@@ -335,7 +329,6 @@
             </div>
           </div>
 
-          <!-- Experience Item 3 -->
           <div class="timeline-card">
             <div class="timeline-meta">
               <span class="timeline-date">July 2023 – Aug 2023</span>
@@ -350,7 +343,6 @@
             </div>
           </div>
 
-          <!-- Experience Item 4 -->
           <div class="timeline-card">
             <div class="timeline-meta">
               <span class="timeline-date">Aug 2022 – Sept 2022</span>
@@ -365,7 +357,6 @@
             </div>
           </div>
 
-          <!-- Education Item -->
           <div class="timeline-card education-card">
             <div class="timeline-meta">
               <span class="timeline-date">2020 – 2025</span>
@@ -377,7 +368,6 @@
               <p>Applied analytical problem-solving and structured technical workflows now utilized in creative digital production pipelines.</p>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -427,7 +417,6 @@
           </div>
 
           <div class="contact-grid">
-            <!-- Direct Info -->
             <div class="direct-contact-pane">
               <div class="contact-detail-row">
                 <i class="fa-solid fa-location-dot"></i>
@@ -469,7 +458,6 @@
               </div>
             </div>
 
-            <!-- Inquiry Form -->
             <form class="inquiry-form" onsubmit="handleContactSubmit(event)">
               <div class="form-group">
                 <label for="name">Your Name</label>
@@ -503,7 +491,7 @@
     </section>
   </main>
 
-  <!-- MODAL FOR FULL PROJECT PREVIEW -->
+  <!-- MODAL FOR PROJECT PREVIEW -->
   <div class="project-modal" id="projectModal">
     <div class="modal-backdrop" id="modalBackdrop"></div>
     <div class="modal-container">
