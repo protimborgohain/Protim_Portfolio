@@ -1,54 +1,138 @@
 /* ==========================================================================
    PORTFOLIO DATA CONFIGURATION
-   Easily add or update your video editing work here.
+   All 12 verified works by Protim Sri Borgohain
    ========================================================================== */
 const portfolioProjects = [
   {
     id: 1,
-    title: "High-Retention Fitness Promo Reel",
-    client: "Anvex Media / Fitness Partner",
-    category: "reels",
-    categoryLabel: "REELS",
-    thumbnail: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80",
-    videoUrl: "YOUR_PROJECT_VIDEO_LINK_1.mp4", // Drop your MP4 link, YouTube/Vimeo Embed, or Drive Link
-    description: "Designed with explosive sound design, dynamic zoom ramps, and kinetic subtitle motion to achieve >80% average watch duration.",
-    tools: ["Premiere Pro", "CapCut", "Photoshop"],
-    year: "2026"
+    title: "The Man Company — Date Night Campaign",
+    client: "The Man Company",
+    category: "commercial",
+    categoryLabel: "COMMERCIAL / GROOMING",
+    videoUrl: "https://res.cloudinary.com/tf0gxhob/video/upload/v1787645464/Aaa_The_Man_Company___Date.mp4",
+    description: "High-impact commercial video edit featuring punchy sound design, seamless lifestyle pacing, and high-conversion visual storytelling.",
+    tools: ["Adobe Premiere Pro", "CapCut", "Sound Design"],
+    year: "2025"
   },
   {
     id: 2,
-    title: "Direct-to-Consumer UGC Ad",
-    client: "E-Commerce Brand Campaign",
-    category: "ads",
-    categoryLabel: "ADS & UGC",
-    thumbnail: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=800&q=80",
-    videoUrl: "YOUR_PROJECT_VIDEO_LINK_2.mp4",
-    description: "Authentic pacing with pattern interrupts, split-screen proof demonstrations, and high-conversion hooks.",
-    tools: ["Premiere Pro", "CapCut"],
+    title: "The Man Company — Product Spotlight",
+    client: "The Man Company",
+    category: "commercial",
+    categoryLabel: "D2C ADVERTISEMENT",
+    videoUrl: "https://res.cloudinary.com/tf0gxhob/video/upload/v1787645463/Aaa1_Man_Company_D1R01.mov",
+    description: "Fast-paced D2C ad edit with split-second dynamic cuts, crisp motion framing, and high-retention product placement.",
+    tools: ["Adobe Premiere Pro", "Color Grading"],
     year: "2025"
   },
   {
     id: 3,
-    title: "Commercial Product Spotlight",
-    client: "Commercial Client",
-    category: "brand",
-    categoryLabel: "BRAND CONTENT",
-    thumbnail: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
-    videoUrl: "YOUR_PROJECT_VIDEO_LINK_3.mp4",
-    description: "Cinematic color grading, speed ramping, and pristine vocal and ambient audio mastering.",
-    tools: ["Premiere Pro", "Photoshop", "Canva"],
-    year: "2025"
+    title: "Automobile & Automotive Showcase",
+    client: "Automobile Showcase",
+    category: "commercial",
+    categoryLabel: "AUTOMOBILE",
+    videoUrl: "https://res.cloudinary.com/tf0gxhob/video/upload/v1787648596/to_web.mov",
+    description: "Cinematic automotive commercial cut with speed ramps, aggressive sound design, precision color grading, and showroom-grade finish.",
+    tools: ["Adobe Premiere Pro", "Color Grading", "Audio Sync"],
+    year: "2026"
   },
   {
     id: 4,
-    title: "Educational Hook & Retention Reel",
-    client: "Digital Creator",
-    category: "reels",
-    categoryLabel: "REELS",
-    thumbnail: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80",
-    videoUrl: "YOUR_PROJECT_VIDEO_LINK_4.mp4",
-    description: "Fast-paced storytelling with custom sound cues, smooth transitions, and animated infographics.",
-    tools: ["CapCut", "Premiere Pro"],
+    title: "Luxury Real Estate Walkthrough",
+    client: "Real Estate Brand",
+    category: "commercial",
+    categoryLabel: "REAL ESTATE",
+    videoUrl: "https://res.cloudinary.com/tf0gxhob/video/upload/v1787648597/to_web3.mov",
+    description: "Smooth architectural video showcase featuring fluid camera stabilization, ambient audio layering, and elegant pacing.",
+    tools: ["Adobe Premiere Pro", "Photoshop"],
+    year: "2026"
+  },
+  {
+    id: 5,
+    title: "Salon & Modern Grooming Experience",
+    client: "Salon & Grooming",
+    category: "commercial",
+    categoryLabel: "SALON & LIFESTYLE",
+    videoUrl: "https://res.cloudinary.com/tf0gxhob/video/upload/v1787645459/Grooming.mp4",
+    description: "Snappy social-first edit highlighting salon craft, client transformations, and energetic background rhythm.",
+    tools: ["CapCut", "Adobe Premiere Pro"],
+    year: "2025"
+  },
+  {
+    id: 6,
+    title: "SaaS & Tech Product Launch",
+    client: "IT / Tech / Startup",
+    category: "tech",
+    categoryLabel: "TECH & STARTUP",
+    videoUrl: "https://res.cloudinary.com/tf0gxhob/video/upload/v1787645460/HQ_Final.mov",
+    description: "Polished tech startup promotional video showcasing product UI workflow, sleek kinetic typography, and corporate narrative.",
+    tools: ["Adobe Premiere Pro", "Motion Graphics", "Photoshop"],
+    year: "2026"
+  },
+  {
+    id: 7,
+    title: "Tech Innovation & Founder Story",
+    client: "Tech Client",
+    category: "tech",
+    categoryLabel: "TECH & IT",
+    videoUrl: "https://res.cloudinary.com/tf0gxhob/video/upload/v1787645471/Subham.mp4",
+    description: "Engaging talking-head and B-roll tech video engineered for maximum audience retention with clean lower-thirds and audio leveling.",
+    tools: ["Adobe Premiere Pro", "CapCut"],
+    year: "2025"
+  },
+  {
+    id: 8,
+    title: "Healthcare Awareness (Assamese)",
+    client: "Healthcare Partner",
+    category: "lifestyle",
+    categoryLabel: "HEALTHCARE / REGIONAL",
+    videoUrl: "https://res.cloudinary.com/tf0gxhob/video/upload/v1787648609/to_web2.mov",
+    description: "Educational regional health awareness video structured with clean subtitles, authoritative pacing, and patient trust cues.",
+    tools: ["Adobe Premiere Pro", "Canva", "Audio Mastering"],
+    year: "2026"
+  },
+  {
+    id: 9,
+    title: "Veda Mandir Devotional Series (Hindi)",
+    client: "Veda Mandir",
+    category: "devotional",
+    categoryLabel: "DEVOTIONAL",
+    videoUrl: "https://res.cloudinary.com/tf0gxhob/video/upload/v1787645462/Aaa_Vedamandir_Hindi_d01.mov",
+    description: "Serene cultural and spiritual video edit combining traditional aesthetic grading, layered chants, and smooth transitions.",
+    tools: ["Adobe Premiere Pro", "Color Grading"],
+    year: "2025"
+  },
+  {
+    id: 10,
+    title: "Kannada Devotional & Cultural Film",
+    client: "Regional Cultural Series",
+    category: "devotional",
+    categoryLabel: "KANNADA / DEVOTIONAL",
+    videoUrl: "https://res.cloudinary.com/tf0gxhob/video/upload/v1787645464/Kannada.mov",
+    description: "Vibrant regional narrative editing balanced with devotional soundtracks, color correction, and culturally aligned typography.",
+    tools: ["Adobe Premiere Pro", "Audio Sync"],
+    year: "2025"
+  },
+  {
+    id: 11,
+    title: "Tamil Devotional & Temple Feature",
+    client: "Regional Cultural Series",
+    category: "devotional",
+    categoryLabel: "TAMIL / DEVOTIONAL",
+    videoUrl: "https://res.cloudinary.com/tf0gxhob/video/upload/v1787645468/Tamil.mov",
+    description: "Rich devotional storytelling featuring sacred temple architectural footage, traditional instrument sync, and warm tone curves.",
+    tools: ["Adobe Premiere Pro", "Color Correction"],
+    year: "2025"
+  },
+  {
+    id: 12,
+    title: "Creative Motion Graphics Introduction",
+    client: "Creative Portfolio Showcase",
+    category: "motion",
+    categoryLabel: "MOTION GRAPHICS",
+    videoUrl: "https://res.cloudinary.com/tf0gxhob/video/upload/v1787645465/Sample_Introduction.mp4",
+    description: "Dynamic title animations, shape morphs, kinetic text reveal sequences, and modern visual branding.",
+    tools: ["Motion Graphics", "Photoshop", "Premiere Pro"],
     year: "2026"
   }
 ];
@@ -57,23 +141,24 @@ const portfolioProjects = [
    DYNAMIC ROLE ROTATION
    ========================================================================== */
 const roles = [
-  "VIDEO EDITOR",
-  "CONTENT CREATOR",
-  "CREATIVE STORYTELLER",
-  "MOTION DESIGNER"
+  "VIDEO EDITING",
+  "HIGH RETENTION REELS",
+  "COMMERCIAL ADS",
+  "MOTION GRAPHICS"
 ];
 let currentRoleIndex = 0;
 const dynamicRoleEl = document.getElementById("dynamicRole");
 
-setInterval(() => {
-  if (!dynamicRoleEl) return;
-  dynamicRoleEl.style.opacity = "0";
-  setTimeout(() => {
-    currentRoleIndex = (currentRoleIndex + 1) % roles.length;
-    dynamicRoleEl.textContent = roles[currentRoleIndex];
-    dynamicRoleEl.style.opacity = "1";
-  }, 300);
-}, 2800);
+if (dynamicRoleEl) {
+  setInterval(() => {
+    dynamicRoleEl.style.opacity = "0";
+    setTimeout(() => {
+      currentRoleIndex = (currentRoleIndex + 1) % roles.length;
+      dynamicRoleEl.textContent = roles[currentRoleIndex];
+      dynamicRoleEl.style.opacity = "1";
+    }, 300);
+  }, 2800);
+}
 
 /* ==========================================================================
    CUSTOM CURSOR LOGIC
@@ -81,35 +166,39 @@ setInterval(() => {
 const cursorDot = document.getElementById("cursorDot");
 const cursorOutline = document.getElementById("cursorOutline");
 
-window.addEventListener("mousemove", (e) => {
-  const posX = e.clientX;
-  const posY = e.clientY;
+if (cursorDot && cursorOutline) {
+  window.addEventListener("mousemove", (e) => {
+    const posX = e.clientX;
+    const posY = e.clientY;
 
-  cursorDot.style.left = `${posX}px`;
-  cursorDot.style.top = `${posY}px`;
+    cursorDot.style.left = `${posX}px`;
+    cursorDot.style.top = `${posY}px`;
 
-  cursorOutline.animate({
-    left: `${posX}px`,
-    top: `${posY}px`
-  }, { duration: 400, fill: "forwards" });
-});
-
-// Magnetic effect on interactive elements
-document.querySelectorAll(".magnetic, .filter-tab, .project-card, .btn").forEach((el) => {
-  el.addEventListener("mouseenter", () => {
-    cursorOutline.style.width = "54px";
-    cursorOutline.style.height = "54px";
-    cursorOutline.style.backgroundColor = "rgba(91, 92, 255, 0.15)";
+    cursorOutline.animate({
+      left: `${posX}px`,
+      top: `${posY}px`
+    }, { duration: 400, fill: "forwards" });
   });
-  el.addEventListener("mouseleave", () => {
-    cursorOutline.style.width = "32px";
-    cursorOutline.style.height = "32px";
-    cursorOutline.style.backgroundColor = "transparent";
-  });
-});
+
+  const bindHoverElements = () => {
+    document.querySelectorAll(".magnetic, .filter-tab, .project-card, .btn, .social-btn").forEach((el) => {
+      el.addEventListener("mouseenter", () => {
+        cursorOutline.style.width = "54px";
+        cursorOutline.style.height = "54px";
+        cursorOutline.style.backgroundColor = "rgba(91, 92, 255, 0.15)";
+      });
+      el.addEventListener("mouseleave", () => {
+        cursorOutline.style.width = "32px";
+        cursorOutline.style.height = "32px";
+        cursorOutline.style.backgroundColor = "transparent";
+      });
+    });
+  };
+  bindHoverElements();
+}
 
 /* ==========================================================================
-   STICKY NAVBAR BACKGROUND BLUR
+   STICKY NAVBAR
    ========================================================================== */
 const navbar = document.getElementById("navbar");
 window.addEventListener("scroll", () => {
@@ -123,12 +212,14 @@ window.addEventListener("scroll", () => {
 // Mobile menu toggle
 const mobileToggle = document.getElementById("mobileToggle");
 const navLinks = document.querySelector(".nav-links");
-mobileToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("mobile-open");
-});
+if (mobileToggle && navLinks) {
+  mobileToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("mobile-open");
+  });
+}
 
 /* ==========================================================================
-   PORTFOLIO RENDERING & FILTERING
+   PORTFOLIO RENDERING & FILTERING WITH VIDEO HOVER PREVIEWS
    ========================================================================== */
 const portfolioGrid = document.getElementById("portfolioGrid");
 const filterTabs = document.querySelectorAll(".filter-tab");
@@ -148,7 +239,7 @@ function renderPortfolio(filter = "all") {
 
     card.innerHTML = `
       <div class="project-card-thumb">
-        <img src="${project.thumbnail}" alt="${project.title}" loading="lazy" />
+        <video src="${project.videoUrl}#t=0.5" muted loop preload="metadata" playsinline></video>
         <span class="project-tag-badge">${project.categoryLabel}</span>
       </div>
       <div class="project-card-info">
@@ -157,6 +248,19 @@ function renderPortfolio(filter = "all") {
         <p class="project-desc">${project.description}</p>
       </div>
     `;
+
+    // Hover to preview video card directly
+    const videoEl = card.querySelector("video");
+    card.addEventListener("mouseenter", () => {
+      if (videoEl) videoEl.play().catch(() => {});
+    });
+    card.addEventListener("mouseleave", () => {
+      if (videoEl) {
+        videoEl.pause();
+        videoEl.currentTime = 0.5;
+      }
+    });
+
     portfolioGrid.appendChild(card);
   });
 }
@@ -170,16 +274,18 @@ filterTabs.forEach((tab) => {
 });
 
 /* ==========================================================================
-   PROJECT MODAL POPUP
+   PROJECT MODAL POPUP (FULL-SCREEN CINEMATIC PLAYER)
    ========================================================================== */
 const projectModal = document.getElementById("projectModal");
 const modalBackdrop = document.getElementById("modalBackdrop");
 const modalClose = document.getElementById("modalClose");
 
 function openProjectModal(project) {
+  if (!projectModal) return;
+
   document.getElementById("modalCat").textContent = project.categoryLabel;
   document.getElementById("modalTitle").textContent = project.title;
-  document.getElementById("modalClient").innerHTML = `Client: <strong>${project.client}</strong>`;
+  document.getElementById("modalClient").innerHTML = `Client / Brand: <strong>${project.client}</strong>`;
   document.getElementById("modalDesc").textContent = project.description;
 
   const toolsContainer = document.getElementById("modalTools");
@@ -192,32 +298,31 @@ function openProjectModal(project) {
   });
 
   const videoSlot = document.getElementById("modalVideoSlot");
-  if (project.videoUrl.endsWith(".mp4")) {
-    videoSlot.innerHTML = `
-      <video controls autoplay style="width:100%; max-height:450px; border-radius:8px;">
-        <source src="${project.videoUrl}" type="video/mp4">
-      </video>
-    `;
-  } else {
-    // If embedding an iframe (e.g., YouTube/Vimeo)
-    videoSlot.innerHTML = `
-      <div style="padding: 2rem; color: #a1a1a1; text-align: center;">
-        <p>Video Source: <strong>${project.videoUrl}</strong></p>
-        <small>Replace this placeholder URL in script.js with your hosted MP4 or YouTube embed.</small>
-      </div>
-    `;
-  }
+  videoSlot.innerHTML = `
+    <video controls autoplay playsinline style="width:100%; max-height:480px; border-radius:8px; background:#000;">
+      <source src="${project.videoUrl}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  `;
 
   projectModal.classList.add("active");
 }
 
 function closeModal() {
+  if (!projectModal) return;
   projectModal.classList.remove("active");
-  document.getElementById("modalVideoSlot").innerHTML = "";
+  const videoSlot = document.getElementById("modalVideoSlot");
+  if (videoSlot) videoSlot.innerHTML = "";
 }
 
-modalBackdrop.addEventListener("click", closeModal);
-modalClose.addEventListener("click", closeModal);
+if (modalBackdrop) modalBackdrop.addEventListener("click", closeModal);
+if (modalClose) modalClose.addEventListener("click", closeModal);
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && projectModal && projectModal.classList.contains("active")) {
+    closeModal();
+  }
+});
 
 /* ==========================================================================
    SHOWREEL PLAYER INTERACTION
@@ -240,9 +345,9 @@ if (playShowreelBtn && mainShowreelVideo) {
 function handleContactSubmit(e) {
   e.preventDefault();
   const name = document.getElementById("name").value;
-  alert(`Thank you, ${name}! Your project message has been submitted. Protim will get back to you shortly.`);
+  alert(`Thank you, ${name}! Your project message has been submitted. Protim will reach out shortly.`);
   e.target.reset();
 }
 
-// Initial render
+// Initial render of all 12 projects
 renderPortfolio();
