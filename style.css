@@ -533,11 +533,11 @@ h1, h2, h3, h4 {
 }
 
 .scroll-left {
-  animation: scrollLeftTrack 35s linear infinite;
+  animation: scrollLeftTrack 40s linear infinite;
 }
 
 .scroll-right {
-  animation: scrollRightTrack 35s linear infinite;
+  animation: scrollRightTrack 40s linear infinite;
 }
 
 .infinite-scroll-container:hover .scroll-track {
