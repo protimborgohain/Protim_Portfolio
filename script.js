@@ -1,6 +1,5 @@
 /* ==========================================================================
    PORTFOLIO DATA CONFIGURATION
-   All 12 projects categorized accurately with separate Real Estate & Automobile
    ========================================================================== */
 const portfolioProjects = [
   // --- 1. REAL ESTATE ---
@@ -150,208 +149,214 @@ const portfolioProjects = [
   }
 ];
 
-/* ==========================================================================
-   DYNAMIC ROLE ROTATION
-   ========================================================================== */
-const roles = [
-  "VIDEO EDITING",
-  "HIGH RETENTION REELS",
-  "COMMERCIAL ADS",
-  "MOTION GRAPHICS"
-];
-let currentRoleIndex = 0;
-const dynamicRoleEl = document.getElementById("dynamicRole");
+function initPortfolioSite() {
+  /* ==========================================================================
+     DYNAMIC ROLE ROTATION
+     ========================================================================== */
+  const roles = [
+    "VIDEO EDITING",
+    "HIGH RETENTION REELS",
+    "COMMERCIAL ADS",
+    "MOTION GRAPHICS"
+  ];
+  let currentRoleIndex = 0;
+  const dynamicRoleEl = document.getElementById("dynamicRole");
 
-if (dynamicRoleEl) {
-  setInterval(() => {
-    dynamicRoleEl.style.opacity = "0";
-    setTimeout(() => {
-      currentRoleIndex = (currentRoleIndex + 1) % roles.length;
-      dynamicRoleEl.textContent = roles[currentRoleIndex];
-      dynamicRoleEl.style.opacity = "1";
-    }, 300);
-  }, 2800);
-}
+  if (dynamicRoleEl) {
+    setInterval(function() {
+      dynamicRoleEl.style.opacity = "0";
+      setTimeout(function() {
+        currentRoleIndex = (currentRoleIndex + 1) % roles.length;
+        dynamicRoleEl.textContent = roles[currentRoleIndex];
+        dynamicRoleEl.style.opacity = "1";
+      }, 300);
+    }, 2800);
+  }
 
-/* ==========================================================================
-   CUSTOM CURSOR LOGIC
-   ========================================================================== */
-const cursorDot = document.getElementById("cursorDot");
-const cursorOutline = document.getElementById("cursorOutline");
+  /* ==========================================================================
+     CUSTOM CURSOR
+     ========================================================================== */
+  const cursorDot = document.getElementById("cursorDot");
+  const cursorOutline = document.getElementById("cursorOutline");
 
-if (cursorDot && cursorOutline) {
-  window.addEventListener("mousemove", (e) => {
-    const posX = e.clientX;
-    const posY = e.clientY;
+  if (cursorDot && cursorOutline) {
+    window.addEventListener("mousemove", function(e) {
+      cursorDot.style.left = e.clientX + "px";
+      cursorDot.style.top = e.clientY + "px";
 
-    cursorDot.style.left = `${posX}px`;
-    cursorDot.style.top = `${posY}px`;
+      if (cursorOutline.animate) {
+        cursorOutline.animate({
+          left: e.clientX + "px",
+          top: e.clientY + "px"
+        }, { duration: 400, fill: "forwards" });
+      }
+    });
 
-    cursorOutline.animate({
-      left: `${posX}px`,
-      top: `${posY}px`
-    }, { duration: 400, fill: "forwards" });
-  });
-
-  const bindHoverElements = () => {
-    document.querySelectorAll(".magnetic, .filter-tab, .project-card, .btn, .social-btn").forEach((el) => {
-      el.addEventListener("mouseenter", () => {
+    document.querySelectorAll(".filter-tab, .project-card, .btn, .social-btn").forEach(function(el) {
+      el.addEventListener("mouseenter", function() {
         cursorOutline.style.width = "54px";
         cursorOutline.style.height = "54px";
         cursorOutline.style.backgroundColor = "rgba(91, 92, 255, 0.15)";
       });
-      el.addEventListener("mouseleave", () => {
+      el.addEventListener("mouseleave", function() {
         cursorOutline.style.width = "32px";
         cursorOutline.style.height = "32px";
         cursorOutline.style.backgroundColor = "transparent";
       });
     });
-  };
-  bindHoverElements();
-}
-
-/* ==========================================================================
-   STICKY NAVBAR
-   ========================================================================== */
-const navbar = document.getElementById("navbar");
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 50) {
-    navbar.classList.add("scrolled");
-  } else {
-    navbar.classList.remove("scrolled");
   }
-});
 
-// Mobile menu toggle
-const mobileToggle = document.getElementById("mobileToggle");
-const navLinks = document.querySelector(".nav-links");
-if (mobileToggle && navLinks) {
-  mobileToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("mobile-open");
+  /* ==========================================================================
+     STICKY NAVBAR & MOBILE MENU
+     ========================================================================== */
+  const navbar = document.getElementById("navbar");
+  window.addEventListener("scroll", function() {
+    if (navbar) {
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    }
   });
-}
 
-/* ==========================================================================
-   PORTFOLIO RENDERING WITH AUTOPLAY & LOOPING VIDEOS
-   ========================================================================== */
-const portfolioGrid = document.getElementById("portfolioGrid");
-const filterTabs = document.querySelectorAll(".filter-tab");
+  const mobileToggle = document.getElementById("mobileToggle");
+  const navLinks = document.getElementById("navLinks");
+  if (mobileToggle && navLinks) {
+    mobileToggle.addEventListener("click", function() {
+      navLinks.classList.toggle("mobile-open");
+    });
+  }
 
-function renderPortfolio(filter = "all") {
-  if (!portfolioGrid) return;
-  portfolioGrid.innerHTML = "";
+  /* ==========================================================================
+     PORTFOLIO RENDERING
+     ========================================================================== */
+  const portfolioGrid = document.getElementById("portfolioGrid");
+  const filterTabs = document.querySelectorAll(".filter-tab");
 
-  const filtered = filter === "all" 
-    ? portfolioProjects 
-    : portfolioProjects.filter(p => p.category === filter);
+  function renderPortfolio(filter) {
+    if (!portfolioGrid) return;
+    portfolioGrid.innerHTML = "";
+    filter = filter || "all";
 
-  filtered.forEach((project) => {
-    const card = document.createElement("div");
-    card.className = "project-card";
-    card.onclick = () => openProjectModal(project);
+    const filtered = filter === "all" 
+      ? portfolioProjects 
+      : portfolioProjects.filter(function(p) { return p.category === filter; });
 
-    card.innerHTML = `
-      <div class="project-card-thumb">
-        <video 
-          src="${project.videoUrl}" 
-          autoplay 
-          muted 
-          loop 
-          playsinline 
-          preload="metadata"
-        ></video>
-        <span class="project-tag-badge">${project.categoryLabel}</span>
-      </div>
-      <div class="project-card-info">
-        <h3>${project.title}</h3>
-        <p class="project-client">${project.client}</p>
-        <p class="project-desc">${project.description}</p>
-      </div>
-    `;
+    filtered.forEach(function(project) {
+      const card = document.createElement("div");
+      card.className = "project-card";
+      card.onclick = function() { openProjectModal(project); };
 
-    // Ensure autoplay works on desktop and mobile browsers
-    const videoEl = card.querySelector("video");
-    if (videoEl) {
-      videoEl.play().catch(() => {});
+      card.innerHTML = 
+        '<div class="project-card-thumb">' +
+          '<video src="' + project.videoUrl + '" autoplay muted loop playsinline preload="metadata"></video>' +
+          '<span class="project-tag-badge">' + project.categoryLabel + '</span>' +
+        '</div>' +
+        '<div class="project-card-info">' +
+          '<h3>' + project.title + '</h3>' +
+          '<p class="project-client">' + project.client + '</p>' +
+          '<p class="project-desc">' + project.description + '</p>' +
+        '</div>';
+
+      const videoEl = card.querySelector("video");
+      if (videoEl) {
+        videoEl.play().catch(function() {});
+      }
+
+      portfolioGrid.appendChild(card);
+    });
+  }
+
+  filterTabs.forEach(function(tab) {
+    tab.addEventListener("click", function() {
+      filterTabs.forEach(function(t) { t.classList.remove("active"); });
+      tab.classList.add("active");
+      renderPortfolio(tab.getAttribute("data-filter"));
+    });
+  });
+
+  /* ==========================================================================
+     PROJECT MODAL
+     ========================================================================== */
+  const projectModal = document.getElementById("projectModal");
+  const modalBackdrop = document.getElementById("modalBackdrop");
+  const modalClose = document.getElementById("modalClose");
+
+  function openProjectModal(project) {
+    if (!projectModal) return;
+
+    const modalCat = document.getElementById("modalCat");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalClient = document.getElementById("modalClient");
+    const modalDesc = document.getElementById("modalDesc");
+    const toolsContainer = document.getElementById("modalTools");
+    const videoSlot = document.getElementById("modalVideoSlot");
+
+    if (modalCat) modalCat.textContent = project.categoryLabel;
+    if (modalTitle) modalTitle.textContent = project.title;
+    if (modalClient) modalClient.innerHTML = 'Client / Brand: <strong>' + project.client + '</strong>';
+    if (modalDesc) modalDesc.textContent = project.description;
+
+    if (toolsContainer) {
+      toolsContainer.innerHTML = "";
+      project.tools.forEach(function(tool) {
+        const chip = document.createElement("span");
+        chip.className = "tool-chip";
+        chip.textContent = tool;
+        toolsContainer.appendChild(chip);
+      });
     }
 
-    portfolioGrid.appendChild(card);
-  });
-}
+    if (videoSlot) {
+      videoSlot.innerHTML = 
+        '<video controls autoplay playsinline style="width:100%; max-height:480px; border-radius:8px; background:#000;">' +
+          '<source src="' + project.videoUrl + '" type="video/mp4">' +
+          'Your browser does not support the video tag.' +
+        '</video>';
+    }
 
-filterTabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    filterTabs.forEach(t => t.classList.remove("active"));
-    tab.classList.add("active");
-    renderPortfolio(tab.dataset.filter);
-  });
-});
-
-/* ==========================================================================
-   PROJECT MODAL POPUP (FULL-SCREEN CINEMATIC PLAYER WITH AUDIO)
-   ========================================================================== */
-const projectModal = document.getElementById("projectModal");
-const modalBackdrop = document.getElementById("modalBackdrop");
-const modalClose = document.getElementById("modalClose");
-
-function openProjectModal(project) {
-  if (!projectModal) return;
-
-  document.getElementById("modalCat").textContent = project.categoryLabel;
-  document.getElementById("modalTitle").textContent = project.title;
-  document.getElementById("modalClient").innerHTML = `Client / Brand: <strong>${project.client}</strong>`;
-  document.getElementById("modalDesc").textContent = project.description;
-
-  const toolsContainer = document.getElementById("modalTools");
-  toolsContainer.innerHTML = "";
-  project.tools.forEach(tool => {
-    const chip = document.createElement("span");
-    chip.className = "tool-chip";
-    chip.textContent = tool;
-    toolsContainer.appendChild(chip);
-  });
-
-  const videoSlot = document.getElementById("modalVideoSlot");
-  videoSlot.innerHTML = `
-    <video controls autoplay playsinline style="width:100%; max-height:480px; border-radius:8px; background:#000;">
-      <source src="${project.videoUrl}" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  `;
-
-  projectModal.classList.add("active");
-}
-
-function closeModal() {
-  if (!projectModal) return;
-  projectModal.classList.remove("active");
-  const videoSlot = document.getElementById("modalVideoSlot");
-  if (videoSlot) videoSlot.innerHTML = "";
-}
-
-if (modalBackdrop) modalBackdrop.addEventListener("click", closeModal);
-if (modalClose) modalClose.addEventListener("click", closeModal);
-
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && projectModal && projectModal.classList.contains("active")) {
-    closeModal();
+    projectModal.classList.add("active");
   }
-});
 
-/* ==========================================================================
-   SHOWREEL PLAYER INTERACTION
-   ========================================================================== */
-const playShowreelBtn = document.getElementById("playShowreelBtn");
-const mainShowreelVideo = document.getElementById("mainShowreelVideo");
+  function closeModal() {
+    if (!projectModal) return;
+    projectModal.classList.remove("active");
+    const videoSlot = document.getElementById("modalVideoSlot");
+    if (videoSlot) videoSlot.innerHTML = "";
+  }
 
-if (playShowreelBtn && mainShowreelVideo) {
-  playShowreelBtn.addEventListener("click", () => {
-    playShowreelBtn.style.display = "none";
-    mainShowreelVideo.controls = true;
-    mainShowreelVideo.muted = false;
-    mainShowreelVideo.play();
+  if (modalBackdrop) modalBackdrop.addEventListener("click", closeModal);
+  if (modalClose) modalClose.addEventListener("click", closeModal);
+
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape" && projectModal && projectModal.classList.contains("active")) {
+      closeModal();
+    }
   });
+
+  /* ==========================================================================
+     SHOWREEL PLAYER
+     ========================================================================== */
+  const playShowreelBtn = document.getElementById("playShowreelBtn");
+  const mainShowreelVideo = document.getElementById("mainShowreelVideo");
+
+  if (playShowreelBtn && mainShowreelVideo) {
+    playShowreelBtn.addEventListener("click", function() {
+      playShowreelBtn.style.display = "none";
+      mainShowreelVideo.controls = true;
+      mainShowreelVideo.muted = false;
+      mainShowreelVideo.play();
+    });
+  }
+
+  // Initial render
+  renderPortfolio("all");
 }
 
-// Initial render
-renderPortfolio();
+// Initialise safely
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initPortfolioSite);
+} else {
+  initPortfolioSite();
+}
