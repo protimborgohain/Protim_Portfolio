@@ -1,9 +1,19 @@
 /* ==========================================================================
-   PORTFOLIO DATA CONFIGURATION (12 UNIQUE PROJECTS)
+   PORTFOLIO DATA CONFIGURATION (ALL 12 EXACT WORKS ORGANIZED)
    ========================================================================== */
 const portfolioProjects = [
   {
     id: 1,
+    title: "Healthcare / Assamese Production",
+    client: "Healthcare Partner",
+    categoryLabel: "HEALTHCARE",
+    videoUrl: "https://res.cloudinary.com/tf0gxhob/video/upload/v1787648609/to_web2.mov",
+    description: "Educational regional health awareness video structured with clean subtitles, authoritative pacing, and patient trust cues.",
+    tools: ["Adobe Premiere Pro", "Canva", "Audio Mastering"],
+    year: "2026"
+  },
+  {
+    id: 2,
     title: "Luxury Real Estate Walkthrough",
     client: "Real Estate Brand",
     categoryLabel: "REAL ESTATE",
@@ -13,9 +23,9 @@ const portfolioProjects = [
     year: "2026"
   },
   {
-    id: 2,
+    id: 3,
     title: "Automobile & Automotive Showcase",
-    client: "Automobile Showcase",
+    client: "Automobile Brand",
     categoryLabel: "AUTOMOBILE",
     videoUrl: "https://res.cloudinary.com/tf0gxhob/video/upload/v1787648596/to_web.mov",
     description: "Cinematic automotive commercial cut with speed ramps, aggressive sound design, precision color grading, and showroom-grade finish.",
@@ -23,47 +33,7 @@ const portfolioProjects = [
     year: "2026"
   },
   {
-    id: 3,
-    title: "The Man Company — Date Night Campaign",
-    client: "The Man Company",
-    categoryLabel: "GROOMING",
-    videoUrl: "https://res.cloudinary.com/tf0gxhob/video/upload/v1787645464/Aaa_The_Man_Company___Date.mp4",
-    description: "High-impact commercial video edit featuring punchy sound design, seamless lifestyle pacing, and high-conversion visual storytelling.",
-    tools: ["Adobe Premiere Pro", "CapCut", "Sound Design"],
-    year: "2025"
-  },
-  {
     id: 4,
-    title: "The Man Company — Product Spotlight",
-    client: "The Man Company",
-    categoryLabel: "GROOMING",
-    videoUrl: "https://res.cloudinary.com/tf0gxhob/video/upload/v1787645463/Aaa1_Man_Company_D1R01.mov",
-    description: "Fast-paced D2C ad edit with split-second dynamic cuts, crisp motion framing, and high-retention product placement.",
-    tools: ["Adobe Premiere Pro", "Color Grading"],
-    year: "2025"
-  },
-  {
-    id: 5,
-    title: "Salon & Modern Grooming Experience",
-    client: "Salon & Grooming",
-    categoryLabel: "GROOMING",
-    videoUrl: "https://res.cloudinary.com/tf0gxhob/video/upload/v1787645459/Grooming.mp4",
-    description: "Snappy social-first edit highlighting salon craft, client transformations, and energetic background rhythm.",
-    tools: ["CapCut", "Adobe Premiere Pro"],
-    year: "2025"
-  },
-  {
-    id: 6,
-    title: "SaaS & Tech Product Launch",
-    client: "IT / Tech / Startup",
-    categoryLabel: "TECH & STARTUPS",
-    videoUrl: "https://res.cloudinary.com/tf0gxhob/video/upload/v1787645460/HQ_Final.mov",
-    description: "Polished tech startup promotional video showcasing product UI workflow, sleek kinetic typography, and corporate narrative.",
-    tools: ["Adobe Premiere Pro", "Motion Graphics", "Photoshop"],
-    year: "2026"
-  },
-  {
-    id: 7,
     title: "Tech Innovation & Founder Story",
     client: "Tech Client",
     categoryLabel: "TECH & STARTUPS",
@@ -73,44 +43,74 @@ const portfolioProjects = [
     year: "2025"
   },
   {
-    id: 8,
-    title: "Veda Mandir Devotional Series (Hindi)",
-    client: "Veda Mandir",
-    categoryLabel: "DEVOTIONAL & CULTURE",
-    videoUrl: "https://res.cloudinary.com/tf0gxhob/video/upload/v1787645462/Aaa_Vedamandir_Hindi_d01.mov",
-    description: "Serene cultural and spiritual video edit combining traditional aesthetic grading, layered chants, and smooth transitions.",
-    tools: ["Adobe Premiere Pro", "Color Grading"],
-    year: "2025"
-  },
-  {
-    id: 9,
+    id: 5,
     title: "Kannada Devotional & Cultural Film",
     client: "Regional Cultural Series",
-    categoryLabel: "DEVOTIONAL & CULTURE",
+    categoryLabel: "KANNADA DEVOTIONAL",
     videoUrl: "https://res.cloudinary.com/tf0gxhob/video/upload/v1787645464/Kannada.mov",
     description: "Vibrant regional narrative editing balanced with devotional soundtracks, color correction, and culturally aligned typography.",
     tools: ["Adobe Premiere Pro", "Audio Sync"],
     year: "2025"
   },
   {
+    id: 6,
+    title: "The Man Company — Date Night Campaign",
+    client: "The Man Company",
+    categoryLabel: "GROOMING",
+    videoUrl: "https://res.cloudinary.com/tf0gxhob/video/upload/v1787645464/Aaa_The_Man_Company___Date.mp4",
+    description: "High-impact commercial video edit featuring punchy sound design, seamless lifestyle pacing, and high-conversion visual storytelling.",
+    tools: ["Adobe Premiere Pro", "CapCut", "Sound Design"],
+    year: "2025"
+  },
+  {
+    id: 7,
+    title: "The Man Company — Product Spotlight",
+    client: "The Man Company",
+    categoryLabel: "GROOMING",
+    videoUrl: "https://res.cloudinary.com/tf0gxhob/video/upload/v1787645463/Aaa1_Man_Company_D1R01.mov",
+    description: "Fast-paced D2C ad edit with split-second dynamic cuts, crisp motion framing, and high-retention product placement.",
+    tools: ["Adobe Premiere Pro", "Color Grading"],
+    year: "2025"
+  },
+  {
+    id: 8,
+    title: "Salon & Modern Grooming Experience",
+    client: "Salon & Grooming",
+    categoryLabel: "GROOMING",
+    videoUrl: "https://res.cloudinary.com/tf0gxhob/video/upload/v1787645459/Grooming.mp4",
+    description: "Snappy social-first edit highlighting salon craft, client transformations, and energetic background rhythm.",
+    tools: ["CapCut", "Adobe Premiere Pro"],
+    year: "2025"
+  },
+  {
+    id: 9,
+    title: "IT / Tech / Startup Promotional Cut",
+    client: "Tech Startup",
+    categoryLabel: "TECH & STARTUPS",
+    videoUrl: "https://res.cloudinary.com/tf0gxhob/video/upload/v1787645460/HQ_Final.mov",
+    description: "Polished tech startup promotional video showcasing product UI workflow, sleek kinetic typography, and corporate narrative.",
+    tools: ["Adobe Premiere Pro", "Motion Graphics", "Photoshop"],
+    year: "2026"
+  },
+  {
     id: 10,
-    title: "Tamil Devotional & Temple Feature",
-    client: "Regional Cultural Series",
-    categoryLabel: "DEVOTIONAL & CULTURE",
-    videoUrl: "https://res.cloudinary.com/tf0gxhob/video/upload/v1787645468/Tamil.mov",
-    description: "Rich devotional storytelling featuring sacred temple architectural footage, traditional instrument sync, and warm tone curves.",
-    tools: ["Adobe Premiere Pro", "Color Correction"],
+    title: "Veda Mandir Devotional Series (Hindi)",
+    client: "Veda Mandir",
+    categoryLabel: "DEVOTIONAL",
+    videoUrl: "https://res.cloudinary.com/tf0gxhob/video/upload/v1787645462/Aaa_Vedamandir_Hindi_d01.mov",
+    description: "Serene cultural and spiritual video edit combining traditional aesthetic grading, layered chants, and smooth transitions.",
+    tools: ["Adobe Premiere Pro", "Color Grading"],
     year: "2025"
   },
   {
     id: 11,
-    title: "Healthcare Awareness (Assamese)",
-    client: "Healthcare Partner",
-    categoryLabel: "HEALTHCARE",
-    videoUrl: "https://res.cloudinary.com/tf0gxhob/video/upload/v1787648609/to_web2.mov",
-    description: "Educational regional health awareness video structured with clean subtitles, authoritative pacing, and patient trust cues.",
-    tools: ["Adobe Premiere Pro", "Canva", "Audio Mastering"],
-    year: "2026"
+    title: "Tamil Devotional & Temple Feature",
+    client: "Regional Cultural Series",
+    categoryLabel: "TAMIL DEVOTIONAL",
+    videoUrl: "https://res.cloudinary.com/tf0gxhob/video/upload/v1787645468/Tamil.mov",
+    description: "Rich devotional storytelling featuring sacred temple architectural footage, traditional instrument sync, and warm tone curves.",
+    tools: ["Adobe Premiere Pro", "Color Correction"],
+    year: "2025"
   },
   {
     id: 12,
@@ -191,44 +191,40 @@ function initPortfolioSite() {
   }
 
   /* ==========================================================================
-     DUAL HORIZONTAL INFINITE AUTO-SCROLLING WORK ROWS
+     DUAL HORIZONTAL INFINITE AUTO-SCROLLING WORK ROWS (TEXTLESS PREVIEWS)
      ========================================================================== */
   const track1 = document.getElementById("scrollTrack1");
   const track2 = document.getElementById("scrollTrack2");
 
   if (track1 && track2) {
+    // 6 unique videos in Row 1, 6 unique videos in Row 2
     const row1Projects = portfolioProjects.slice(0, 6);
     const row2Projects = portfolioProjects.slice(6, 12);
 
-    function createCardHTML(project) {
+    function createTextlessCardHTML(project) {
       return (
         '<div class="project-card" data-id="' + project.id + '">' +
           '<div class="project-card-thumb">' +
             '<video src="' + project.videoUrl + '" autoplay muted loop playsinline preload="auto"></video>' +
             '<span class="project-tag-badge">' + project.categoryLabel + '</span>' +
           '</div>' +
-          '<div class="project-card-info">' +
-            '<h3>' + project.title + '</h3>' +
-            '<p class="project-client">' + project.client + '</p>' +
-            '<p class="project-desc">' + project.description + '</p>' +
-          '</div>' +
         '</div>'
       );
     }
 
-    // Duplicate cards 3 times to ensure a seamless infinite track width
+    // Duplicate cards 4 times to ensure a seamless endless scrolling ribbon
     let html1 = "";
     let html2 = "";
 
-    for (let i = 0; i < 3; i++) {
-      row1Projects.forEach(function(p) { html1 += createCardHTML(p); });
-      row2Projects.forEach(function(p) { html2 += createCardHTML(p); });
+    for (let i = 0; i < 4; i++) {
+      row1Projects.forEach(function(p) { html1 += createTextlessCardHTML(p); });
+      row2Projects.forEach(function(p) { html2 += createTextlessCardHTML(p); });
     }
 
     track1.innerHTML = html1;
     track2.innerHTML = html2;
 
-    // Attach click modal and force video play
+    // Attach click events and force video preview playback
     document.querySelectorAll(".project-card").forEach(function(card) {
       const cardId = parseInt(card.getAttribute("data-id"));
       const project = portfolioProjects.find(function(p) { return p.id === cardId; });
