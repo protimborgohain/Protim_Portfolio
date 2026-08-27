@@ -126,30 +126,30 @@
       </div>
     </div>
 
-    <!-- PORTFOLIO / SELECTED WORK -->
+    <!-- PORTFOLIO / SELECTED WORK (DUAL INFINITE AUTO-SCROLLING ROWS) -->
     <section class="work-section" id="work">
-      <div class="container">
-        <div class="section-header-flex">
-          <div>
+      <div class="work-container-full">
+        <div class="container">
+          <div class="work-section-header">
             <span class="section-tag">SELECTED WORKS</span>
-            <h2 class="section-title">FEATURED PROJECTS</h2>
-          </div>
-          
-          <!-- Category Filter Tabs -->
-          <div class="portfolio-filter-tabs">
-            <button type="button" class="filter-tab active" data-filter="all">ALL WORK</button>
-            <button type="button" class="filter-tab" data-filter="realestate">REAL ESTATE</button>
-            <button type="button" class="filter-tab" data-filter="automobile">AUTOMOBILE</button>
-            <button type="button" class="filter-tab" data-filter="grooming">GROOMING</button>
-            <button type="button" class="filter-tab" data-filter="tech">TECH & STARTUPS</button>
-            <button type="button" class="filter-tab" data-filter="devotional">DEVOTIONAL & CULTURE</button>
-            <button type="button" class="filter-tab" data-filter="healthcare">HEALTHCARE</button>
-            <button type="button" class="filter-tab" data-filter="motion">MOTION GRAPHICS</button>
+            <h2 class="section-title">FEATURED PRODUCTIONS</h2>
+            <p class="work-subtitle">Explore a continuous stream of commercial cuts, reels, and cinematic edits. Click any card to expand.</p>
           </div>
         </div>
 
-        <!-- Project Grid -->
-        <div class="projects-bento-grid" id="portfolioGrid"></div>
+        <!-- Row 1: Scrolling Left -->
+        <div class="infinite-scroll-container">
+          <div class="scroll-track scroll-left" id="scrollTrack1">
+            <!-- Dynamically populated via script.js -->
+          </div>
+        </div>
+
+        <!-- Row 2: Scrolling Right -->
+        <div class="infinite-scroll-container">
+          <div class="scroll-track scroll-right" id="scrollTrack2">
+            <!-- Dynamically populated via script.js -->
+          </div>
+        </div>
       </div>
     </section>
 
@@ -159,7 +159,7 @@
         <div class="about-grid">
           <div class="about-image-wrapper">
             <div class="image-glass-frame">
-              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Protim Sri Borgohain" class="profile-photo">
+              <img src="https://res.cloudinary.com/tf0gxhob/image/upload/v1787806000/1000396046.jpg" alt="Protim Sri Borgohain" class="profile-photo">
               <div class="photo-badge">
                 <span>PROTIM SRI BORGOHAIN</span>
                 <small>Guwahati, Assam, India</small>
