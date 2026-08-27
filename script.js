@@ -166,19 +166,6 @@ function initPortfolioSite() {
         }, { duration: 400, fill: "forwards" });
       }
     });
-
-    document.querySelectorAll(".project-card, .btn, .social-btn").forEach(function(el) {
-      el.addEventListener("mouseenter", function() {
-        cursorOutline.style.width = "54px";
-        cursorOutline.style.height = "54px";
-        cursorOutline.style.backgroundColor = "rgba(91, 92, 255, 0.15)";
-      });
-      el.addEventListener("mouseleave", function() {
-        cursorOutline.style.width = "32px";
-        cursorOutline.style.height = "32px";
-        cursorOutline.style.backgroundColor = "transparent";
-      });
-    });
   }
 
   /* ==========================================================================
@@ -210,15 +197,14 @@ function initPortfolioSite() {
   const track2 = document.getElementById("scrollTrack2");
 
   if (track1 && track2) {
-    // Split 12 unique projects into 2 distinct groups (6 each)
     const row1Projects = portfolioProjects.slice(0, 6);
     const row2Projects = portfolioProjects.slice(6, 12);
 
     function createCardHTML(project) {
       return (
-        '<div class="project-card">' +
+        '<div class="project-card" data-id="' + project.id + '">' +
           '<div class="project-card-thumb">' +
-            '<video src="' + project.videoUrl + '" autoplay muted loop playsinline preload="none"></video>' +
+            '<video src="' + project.videoUrl + '" autoplay muted loop playsinline preload="auto"></video>' +
             '<span class="project-tag-badge">' + project.categoryLabel + '</span>' +
           '</div>' +
           '<div class="project-card-info">' +
@@ -230,30 +216,32 @@ function initPortfolioSite() {
       );
     }
 
-    // Populate tracks twice to allow seamless CSS infinite looping
+    // Duplicate cards 3 times to ensure a seamless infinite track width
     let html1 = "";
     let html2 = "";
 
-    row1Projects.forEach(function(p) { html1 += createCardHTML(p); });
-    row1Projects.forEach(function(p) { html1 += createCardHTML(p); }); // duplicate for loop
-
-    row2Projects.forEach(function(p) { html2 += createCardHTML(p); });
-    row2Projects.forEach(function(p) { html2 += createCardHTML(p); }); // duplicate for loop
+    for (let i = 0; i < 3; i++) {
+      row1Projects.forEach(function(p) { html1 += createCardHTML(p); });
+      row2Projects.forEach(function(p) { html2 += createCardHTML(p); });
+    }
 
     track1.innerHTML = html1;
     track2.innerHTML = html2;
 
-    // Attach click events and video autoplay triggers to generated cards
-    document.querySelectorAll(".project-card").forEach(function(card, index) {
-      const actualIndex = index % portfolioProjects.length;
-      const project = portfolioProjects[actualIndex];
-      
-      card.onclick = function() {
-        openProjectModal(project);
-      };
+    // Attach click modal and force video play
+    document.querySelectorAll(".project-card").forEach(function(card) {
+      const cardId = parseInt(card.getAttribute("data-id"));
+      const project = portfolioProjects.find(function(p) { return p.id === cardId; });
+
+      if (project) {
+        card.onclick = function() {
+          openProjectModal(project);
+        };
+      }
 
       const videoEl = card.querySelector("video");
       if (videoEl) {
+        videoEl.load();
         videoEl.play().catch(function() {});
       }
     });
