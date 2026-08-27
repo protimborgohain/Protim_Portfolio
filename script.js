@@ -197,7 +197,6 @@ function initPortfolioSite() {
   const track2 = document.getElementById("scrollTrack2");
 
   if (track1 && track2) {
-    // 6 unique videos in Row 1, 6 unique videos in Row 2
     const row1Projects = portfolioProjects.slice(0, 6);
     const row2Projects = portfolioProjects.slice(6, 12);
 
@@ -205,17 +204,20 @@ function initPortfolioSite() {
       return (
         '<div class="project-card" data-id="' + project.id + '">' +
           '<div class="project-card-thumb">' +
-            '<video src="' + project.videoUrl + '" autoplay muted loop playsinline preload="auto"></video>' +
+            '<video autoplay muted loop playsinline>' +
+              '<source src="' + project.videoUrl + '" type="video/mp4">' +
+              '<source src="' + project.videoUrl + '" type="video/quicktime">' +
+            '</video>' +
             '<span class="project-tag-badge">' + project.categoryLabel + '</span>' +
           '</div>' +
         '</div>'
       );
     }
 
-    // Duplicate cards 4 times to ensure a seamless endless scrolling ribbon
     let html1 = "";
     let html2 = "";
 
+    // Duplicate 4 times for seamless infinite loops
     for (let i = 0; i < 4; i++) {
       row1Projects.forEach(function(p) { html1 += createTextlessCardHTML(p); });
       row2Projects.forEach(function(p) { html2 += createTextlessCardHTML(p); });
@@ -224,7 +226,7 @@ function initPortfolioSite() {
     track1.innerHTML = html1;
     track2.innerHTML = html2;
 
-    // Attach click events and force video preview playback
+    // Attach click events and force explicit video playback execution
     document.querySelectorAll(".project-card").forEach(function(card) {
       const cardId = parseInt(card.getAttribute("data-id"));
       const project = portfolioProjects.find(function(p) { return p.id === cardId; });
@@ -237,8 +239,10 @@ function initPortfolioSite() {
 
       const videoEl = card.querySelector("video");
       if (videoEl) {
-        videoEl.load();
-        videoEl.play().catch(function() {});
+        videoEl.play().catch(function() {
+          // Fallback user interaction or reload attempt if autoplay blocked
+          setTimeout(function() { videoEl.play().catch(function() {}); }, 200);
+        });
       }
     });
   }
@@ -279,6 +283,7 @@ function initPortfolioSite() {
       videoSlot.innerHTML = 
         '<video controls autoplay playsinline style="width:100%; max-height:480px; border-radius:8px; background:#000;">' +
           '<source src="' + project.videoUrl + '" type="video/mp4">' +
+          '<source src="' + project.videoUrl + '" type="video/quicktime">' +
           'Your browser does not support the video tag.' +
         '</video>';
     }
